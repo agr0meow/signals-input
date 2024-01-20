@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, input as routerInput, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, effect, input as routerInput, OnInit} from '@angular/core';
 import {TodosService} from "./model/services/todos.service";
 
 @Component({
@@ -14,13 +14,14 @@ import {TodosService} from "./model/services/todos.service";
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export default class TodoItemComponent implements OnInit{
+export default class TodoItemComponent {
   constructor(private _todoService:TodosService) {
+    effect(() => {
+      this._todoService.getById(this.id())
+    });
   }
   public todo = this._todoService.todo
-  ngOnInit(): void {
-   this._todoService.getById(this.id())
-  }
+
 
 id = routerInput.required<number,number>({
   transform: (i:number):number => Number(i)
