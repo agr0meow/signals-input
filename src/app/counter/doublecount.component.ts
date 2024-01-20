@@ -17,12 +17,13 @@ import {
     <h1>
       counter works!
       count: {{ doubleCount() }}
-    </h1>1
+    </h1>
   `,
   styles: ``,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DoublecountComponent {
+export default class DoublecountComponent {
+
   //#TODO solution one
 //   private _doubleCount = 0;
 //
@@ -41,8 +42,9 @@ export class DoublecountComponent {
   // counter = input.required<number>()
   // doubleCount = computed(() => this.counter() * 2)
 //#TODO solution three
-  doubleCount = input.required<number, number>({
+  doubleCount = input<number, number>(0,{
     alias: 'counter',
-    transform: (c:number) => c * 2
+    transform: (c) =>  c ? c* 2 : 0
   })
 }
+

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {DoublecountComponent} from "./counter/doublecount.component";
+import DoublecountComponent from "./counter/doublecount.component";
+import {NavBarComponent} from "./nav-bar/nav-bar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DoublecountComponent],
+  imports: [RouterOutlet, DoublecountComponent, NavBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

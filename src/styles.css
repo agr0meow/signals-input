@@ -7,4 +7,12 @@ body {
 h1  {
   font-size: 50px;
 }
-/* You can add global styles to this file, and also import other style files */
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+li {
+  cursor: pointer;
+  list-style-type: none;
+  padding: 5px;
+}
