@@ -1,1 +1,10 @@
+body {
+  background-color: #282c34;
+  color: white;
+  font-family: 'Halvetica Neue', sans-serif;
+  font-size: 16px;
+}
+h1  {
+  font-size: 50px;
+}
 /* You can add global styles to this file, and also import other style files */
