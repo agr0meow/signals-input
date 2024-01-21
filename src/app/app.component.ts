@@ -23,11 +23,11 @@ export class AppComponent {
   }
 
   increment() {
-  return  this.counter = this.counter+ 1
+this.counter = this.counter+ 1
 
   }
   decrement() {
-  return   this.counter =  this.counter - 1
+this.counter =  this.counter - 1
 
   }
 

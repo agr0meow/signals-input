@@ -1,7 +1,6 @@
-import {computed, Inject, Injectable, Signal, signal, WritableSignal} from '@angular/core';
+import {computed, Injectable,  signal, WritableSignal} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ITodo} from "../todo.interface";
-import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'

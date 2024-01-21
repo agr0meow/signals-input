@@ -23,8 +23,8 @@ export default class TodoItemComponent {
   public todo = this._todoService.todo
 
 
-id = routerInput.required<number,number>({
-  transform: (i:number):number => Number(i)
+id = routerInput.required<number,string>({
+  transform: (i:string):number => Number(i)
 })
 
 }
