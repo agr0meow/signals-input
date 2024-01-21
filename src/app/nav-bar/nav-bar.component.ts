@@ -29,7 +29,15 @@ export class NavBarComponent {
     {
       name: 'todoITem',
       url: `/todo/${this.numberInRange()}`
-    }
+    },
+   {
+     name: 'новый обязательный инпут',
+     url: '/required-input'
+   },
+   {
+     name: "inputSignal + api()",
+     url: 'pokemons'
+   }
   ]
 
   get navigationItems(): INavigationBar[] {
